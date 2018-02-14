@@ -45,7 +45,7 @@ public class Quadratic
 
 
 	}
-
+	
 	public void print( )
 	{
 		System.out.println(rootOne);

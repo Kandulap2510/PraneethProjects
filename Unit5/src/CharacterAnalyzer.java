@@ -10,9 +10,13 @@ import java.util.Scanner;
 public class CharacterAnalyzer
 {
 	private char theChar;
+	private boolean isUpper;
+	private boolean isLower;
+	private boolean isNumber;
 
 	public CharacterAnalyzer()
 	{
+
 
 
 	}
@@ -82,10 +86,20 @@ public class CharacterAnalyzer
 
 	public String toString()
 	{
-
-
-
-
-		return ""+getChar() + " is a lowercase character. ASCII == " + getASCII() + "\n";	  
+		
+		if (isLower() == true)
+				{
+			return ""+getChar() + " is a lowercase character. ASCII == " + getASCII() + "\n";	  
+				}
+		else if (isUpper() == true)
+			{
+			return ""+getChar() + " is an uppercase character. ASCII == " + getASCII() + "\n";	  
+			}
+		else if (isNumber() == true )
+			{
+			return ""+getChar() + " is a numerical character. ASCII == " + getASCII() + "\n";	  
+			}
+		return "";
+		
 	}
 }
