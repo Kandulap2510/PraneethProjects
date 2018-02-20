@@ -87,15 +87,15 @@ public class CharacterAnalyzer
 	public String toString()
 	{
 		
-		if (isLower() == true)
+		if (isLower = true)
 				{
 			return ""+getChar() + " is a lowercase character. ASCII == " + getASCII() + "\n";	  
 				}
-		else if (isUpper() == true)
+		else if (isUpper = true)
 			{
 			return ""+getChar() + " is an uppercase character. ASCII == " + getASCII() + "\n";	  
 			}
-		else if (isNumber() == true )
+		else if (isNumber = true )
 			{
 			return ""+getChar() + " is a numerical character. ASCII == " + getASCII() + "\n";	  
 			}

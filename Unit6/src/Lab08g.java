@@ -14,6 +14,14 @@ public class Lab08g
 		test.setNums(1,5);
 		System.out.println(test);
 		
+		LoopStats OneTest = new LoopStats();
+		OneTest.setNums(10, 30);
+		System.out.println(OneTest);
+		
+		LoopStats TwoTest = new LoopStats();
+		TwoTest.setNums(1, 45);
+		System.out.println(TwoTest);
+		
 		
 		
 		

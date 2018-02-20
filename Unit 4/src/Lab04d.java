@@ -34,5 +34,14 @@ public class Lab04d
 		System.out.println(person.getFirst());
 		System.out.println(person.getLast());
 		System.out.println(person);
+		
+		int b=3, c=14; 
+		if(b<10)
+		   out.println("hello");
+		if(c>10)
+		   out.println("howdy");
+		out.println("goodbye");
+
+
 	}
 }
