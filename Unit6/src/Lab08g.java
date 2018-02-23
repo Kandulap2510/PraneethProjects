@@ -22,6 +22,19 @@ public class Lab08g
 		TwoTest.setNums(1, 45);
 		System.out.println(TwoTest);
 		
+		int b=5;
+		String list="";
+		while( b < 11)
+		{
+		   b = b + 2;
+		   if( b % 2 == 1 )   //checks remainder of b / 2
+		     list = b + " " + list;
+		}
+		System.out.print(list);
+
+
+
+
 		
 		
 		
