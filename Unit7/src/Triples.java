@@ -34,7 +34,7 @@ public class Triples
 		for (int i = 1; i < max; i++)
 		{
 			if ( a%i == 0 && b%i == 0 && c%i == 0)
-			{
+			{ 
 				max = i;
 			}
 		}
