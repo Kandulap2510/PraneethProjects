@@ -1,0 +1,169 @@
+//© A+ Computer Science  -  www.apluscompsci.com
+//Name -
+//Date -
+//Class -
+//Lab  - 
+
+import java.io.File;
+import java.io.IOException;
+import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.Collections;
+import static java.lang.System.*;
+
+public class MadLib
+{
+	private ArrayList<String> verbs;
+	private ArrayList<String> nouns;
+	private ArrayList<String> adjectives;
+	
+	public MadLib()
+	{
+		verbs = new ArrayList<String>();
+		nouns = new ArrayList<String>();
+		adjectives = new ArrayList<String>();
+		
+
+
+
+	}
+
+	public MadLib(String fileName)
+	{
+		
+		this();
+		
+		loadVerbs();
+		loadNouns();
+		loadAdjectives();
+		
+		/*try{
+			Scanner file = new Scanner(new File(fileName));
+		
+	
+		}
+		catch(Exception e)
+		{
+			out.println("Houston we have a problem!");
+		}*/
+		
+	}
+
+	public void loadNouns()
+	{
+		try{
+			Scanner file = new Scanner(new File("nouns.dat"));
+			while (file.hasNextLine()) {
+				nouns.add(file.nextLine());
+			}
+		
+		
+		
+		
+		
+		}
+		catch(Exception e)
+		{
+			out.println("error with loading nouns");
+		}	
+		
+	}
+	
+	public void loadVerbs()
+	{
+		try{
+			Scanner file = new Scanner(new File("verbs.dat"));
+			while (file.hasNextLine()) {
+				verbs.add(file.nextLine());
+			} 
+	
+	
+	
+	
+		}
+		catch(Exception e)
+		{
+			out.println("error with loading verbs");
+		}
+	}
+
+	public void loadAdjectives()
+	{
+		try{
+			Scanner file = new Scanner(new File("adjectives.dat"));
+			while (file.hasNextLine()) {
+				adjectives.add(file.nextLine());
+			} 
+	
+	
+	
+	
+	
+		}
+		catch(Exception e)
+		{
+			out.println("error with loading adjectives");
+		}
+	}
+
+	public String getRandomVerb()
+	{
+		int random = (int )(Math.random() * 50 + 1);
+		String verb = verbs.get(random);
+		return verb;
+	}
+	
+	public String getRandomNoun()
+	{
+		int random = (int )(Math.random() * 50 + 1);
+		String noun = nouns.get(random);
+		return noun;
+	}
+	
+	public String getRandomAdjective()
+	{
+		int random = (int )(Math.random() * 50 + 1);
+		String adjective = adjectives.get(random);
+		return adjective;
+	}		
+
+	public String toString()
+	{
+		String to = "";
+		Scanner scan = null;
+		 
+		try {
+			scan = new Scanner(new File("story.dat"));
+		} 
+		catch(Exception e)
+		{
+			out.println("Houston we have a problem!");
+		}
+		
+		while (scan.hasNext()) {
+			String next = scan.next();
+			if (next.equals("#"))
+				if (scan.hasNext())
+					to += getRandomNoun() + " ";
+				else
+					to += getRandomNoun() + ".";
+			else if (next.equals("@"))
+				if (scan.hasNext())
+					to += getRandomVerb() + " ";
+				else
+					to += getRandomVerb() + ".";
+			else if (next.equals("&"))
+				if (scan.hasNext())
+					to += getRandomAdjective() + " ";
+				else
+					to += getRandomAdjective() + ".";
+			else
+				if (scan.hasNext())
+					to += next + " ";
+				else
+					to += next + ".";
+		}
+		scan.close();
+		return to;
+	}
+}
