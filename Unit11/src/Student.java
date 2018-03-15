@@ -22,65 +22,66 @@ public class Student
 	
 	public Student(String name, String gradeList)
 	{
-		setName(name);
-		setGrades(gradeList);
-		
+
+
 
 	}
 	
 	public void setName(String name)
 	{
-		myName = name;
+
+
 	}	
 	
 	public void setGrades(String gradeList)
 	{
-		myGrades = new Grades(gradeList);
+
+	
 	}
 	
 	public void setGrade(int spot, double grade)
 	{
-		myGrades.setGrade(spot, grade);
+
 
 	}
 
 	public String getName()
 	{
-		return myName;
+		return "";
 	}
 	
 	public int getNumGrades()
 	{
-		return myGrades.getNumGrades();
+		return 0;
 	}
 
 	public double getSum()
 	{
-		return myGrades.getSum();
+		return 0.0;
 	}
 	
 	public double getAverage()
 	{
-		return (myGrades.getSum()/myGrades.getNumGrades());
+		return 0.0;
 	}
 
 	public double getAverageMinusLow()
 	{
-		return ((myGrades.getSum()-myGrades.getLowGrade())/(myGrades.getNumGrades()-1));
+		return 0.0;
 	}
 	
 	public double getHighGrade()
 	{
-		return myGrades.getHighGrade();		
+		return 0.0;		
 	}
 	
 	public double getLowGrade()
 	{
-		return myGrades.getLowGrade();	
+		return 0.0;	
 	}
 	
 	public String toString()
 	{
-		return myName + " = " + myGrades.toString();
+		return "";
 	}	
 }
