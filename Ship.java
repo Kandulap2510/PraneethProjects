@@ -1,4 +1,4 @@
-//© A+ Computer Science  -  www.apluscompsci.com
+//ï¿½ A+ Computer Science  -  www.apluscompsci.com
 //Name -
 //Date -
 //Class - 
@@ -23,12 +23,13 @@ public class Ship extends MovingThing
 
 	public Ship(int x, int y)
 	{
-	   //add code here
+	   super(x,y);
 	}
 
 	public Ship(int x, int y, int s)
 	{
-	   //add code here
+	   super(x,y);
+	   speed = s;
 	}
 
 	public Ship(int x, int y, int w, int h, int s)
@@ -37,29 +38,36 @@ public class Ship extends MovingThing
 		speed=s;
 		try
 		{
-			URL url = getClass().getResource("/images/ship.jpg");
-			image = ImageIO.read(url);
+			image = ImageIO.read(new File("/Users/praneethkandula/Downloads/Starfighter/ship.jpg"));
 		}
 		catch(Exception e)
 		{
-			//feel free to do something here
+			System.out.println("There is an error");
+			e.printStackTrace();
 		}
 	}
 
 
 	public void setSpeed(int s)
 	{
-	   //add more code
+	   speed = s;
 	}
 
 	public int getSpeed()
 	{
-	   return 0;
+	   return speed;
 	}
 
 	public void move(String direction)
 	{
-		//add code here
+		if(direction.equals("UP"))
+			setY(getY() - getSpeed());
+		else if(direction.equals("DOWN"))
+			setY(getY() + getSpeed());
+		else if(direction.equals("RIGHT"))
+			setX(getX()+getSpeed());
+		else if(direction.equals("LEFT"))
+			setX(getX()-getSpeed());
 	}
 
 	public void draw( Graphics window )
