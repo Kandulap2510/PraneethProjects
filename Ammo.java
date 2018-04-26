@@ -1,4 +1,4 @@
-//© A+ Computer Science  -  www.apluscompsci.com
+//ï¿½ A+ Computer Science  -  www.apluscompsci.com
 //Name -
 //Date -
 //Class - 
@@ -21,33 +21,38 @@ public class Ammo extends MovingThing
 
 	public Ammo(int x, int y)
 	{
-		//add code
+		super(x,y);
 	}
 
 	public Ammo(int x, int y, int s)
 	{
-		//add code
+		super(x,y);
+		speed = s;
 	}
 
 	public void setSpeed(int s)
 	{
-	   //add code
+	   speed = s;
 	}
 
 	public int getSpeed()
 	{
-	   return 0;
+	   return speed;
 	}
 
 	public void draw( Graphics window )
 	{
-		//add code to draw the ammo
+		window.setColor(Color.black);
+		window.fillRect(getX(),getY(),5,5);
+		move("");
+		window.setColor(Color.yellow);
+		window.fillRect(getX(),getY(),5,5);
 	}
 	
 	
 	public void move( String direction )
 	{
-		//add code to draw the ammo
+		setY(getY()-getSpeed());
 	}
 
 	public String toString()
