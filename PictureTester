@@ -1,0 +1,176 @@
+/**
+ * This class contains class (static) methods
+ * that will help you test the Picture class 
+ * methods.  Uncomment the methods and the code
+ * in the main to test.
+ * 
+ * @author Barbara Ericson 
+ */
+public class PictureTester
+{
+  /** Method to test zeroBlue */
+	private static Picture beach = new Picture("C:\\Users\\kandulap2510\\Downloads\\Unit16\\pixLab\\images\\beach.jpg");
+  public static void testZeroBlue()
+  {
+    Picture beach = new Picture("C:\\Users\\kandulap2510\\Downloads\\Unit16\\pixLab\\images\\beach.jpg");
+    beach.explore();
+    beach.zeroBlue();
+    beach.explore();
+  }
+  
+  public static void testEncodeDecode()
+  {
+    beach.explore();
+    beach.encode(new Picture("C:\\Users\\kandulap2510\\Downloads\\Unit16\\pixLab\\images\\msg.jpg"));
+    beach.explore();
+    beach.decode().explore();
+  }
+
+  
+  public static void testKeepOnlyBlue()
+  {
+    Picture beachBlue = new Picture("C:\\Users\\kandulap2510\\Downloads\\Unit16\\pixLab\\images\\beach.jpg");
+    beachBlue.explore();
+    beachBlue.keepOnlyBlue();
+    beachBlue.explore();
+  }
+  
+  public static void testKeepOnlyRed()
+  {
+    Picture beachRed = new Picture("C:\\Users\\kandulap2510\\Downloads\\Unit16\\pixLab\\images\\beach.jpg");
+    beachRed.explore();
+    beachRed.keepOnlyRed();
+    beachRed.explore();
+  }
+  
+  public static void testKeepOnlyGreen()
+  {
+    Picture beachGreen = new Picture("C:\\Users\\kandulap2510\\Downloads\\Unit16\\pixLab\\images\\beach.jpg");
+    beachGreen.explore();
+    beachGreen.keepOnlyRed();
+    beachGreen.explore();
+  }
+  
+  public static void testNegate()
+  {
+    Picture Negate = new Picture("C:\\Users\\kandulap2510\\Downloads\\Unit16\\pixLab\\images\\beach.jpg");
+    Negate.explore();
+    Negate.Negate();
+    Negate.explore();
+  }
+  public static void testGrayscale()
+  {
+    Picture Grayscale = new Picture("C:\\Users\\kandulap2510\\Downloads\\Unit16\\pixLab\\images\\beach.jpg");
+    Grayscale.explore();
+    Grayscale.Grayscale();
+    Grayscale.explore();
+  }
+  
+  public static void testFixUnderwater()
+  {
+    Picture FixUnderwater = new Picture("C:\\Users\\kandulap2510\\Downloads\\Unit16\\pixLab\\images\\water.jpg");
+    FixUnderwater.explore();
+    FixUnderwater.fixUnderwater();
+    FixUnderwater.explore();
+  }
+  
+  /** Method to test mirrorVertical */
+  public static void testMirrorVertical()
+  {
+    Picture caterpillar = new Picture("C:\\Users\\kandulap2510\\Downloads\\Unit16\\pixLab\\images\\caterpillar.jpg");
+    caterpillar.explore();
+    caterpillar.mirrorVertical();
+    caterpillar.explore();
+  }
+  
+  /** Method to test mirrorTemple */
+  public static void testMirrorTemple()
+  {
+    Picture temple = new Picture("C:\\Users\\kandulap2510\\Downloads\\Unit16\\pixLab\\images\\temple.jpg");
+    temple.explore();
+    temple.mirrorTemple();
+    temple.explore();
+  }
+  
+  public static void testMirrorArms()
+  {
+	  Picture test = new Picture("C:\\Users\\kandulap2510\\Downloads\\Unit16\\pixLab\\images\\snowman.jpg");
+	    test.explore();
+	    test.mirrorArms();
+	    test.explore();
+  }
+  
+  public static void testMirrorGull()
+  {
+	  Picture test = new Picture("C:\\Users\\kandulap2510\\Downloads\\Unit16\\pixLab\\images\\seagull.jpg");
+	    test.explore();
+	    test.mirrorGull();
+	    test.explore();
+  }
+  
+  public static void testMirrorDiagonal()
+  {
+	  Picture test = new Picture("C:\\Users\\kandulap2510\\Downloads\\Unit16\\pixLab\\images\\barbaraS.jpg");
+	  test.explore();
+	  test.mirrorDiag();
+	  test.explore();
+  }
+  
+  /** Method to test the collage method */
+  public static void testCollage()
+  {
+    Picture canvas = new Picture("C:\\Users\\kandulap2510\\Downloads\\Unit16\\pixLab\\images\\640x480.jpg");
+    canvas.createCollage();
+    canvas.explore();
+  }
+  
+  /** Method to test edgeDetection */
+  public static void testEdgeDetection()
+  {
+    Picture swan = new Picture("C:\\Users\\kandulap2510\\Downloads\\Unit16\\pixLab\\images\\swan.jpg");
+    swan.edgeDetection(10);
+    swan.explore();
+  }
+  
+  /** Main method for testing.  Every class can have a main
+    * method in Java */
+  
+  public static void testSharpen(int x, int y, int w, int h){
+	  
+	  Picture redMotorcycle = new Picture("C:\\Users\\kandulap2510\\Downloads\\Unit16\\pixLab\\images\\redMotorcycle.jpg");
+	  redMotorcycle.explore();
+	  redMotorcycle.sharpen(x,y,w,h);
+	  redMotorcycle.explore();
+  }
+  public static void main(String[] args)
+  {
+	 System.out.println("Praneeth Kandua \nPeriod 2 \n4.24.2018 \nComputer #: 10");
+    // uncomment a call here to run a test
+    // and comment out the ones you don't want
+    // to run
+	 testEncodeDecode();
+    //testZeroBlue();
+    //testKeepOnlyBlue();
+    //testKeepOnlyRed();
+    //testKeepOnlyGreen();
+    //testNegate();
+    //testGrayscale();
+    //testFixUnderwater();
+    //testMirrorVertical();
+    //testMirrorTemple();
+    //testMirrorArms();
+    //testMirrorGull();
+    //testMirrorDiagonal();
+    //testCollage();
+    //testCopy();
+    //testEdgeDetection();
+    //testEdgeDetection2();
+    //testChromakey();
+	// testSharpen(50,50,430,589);
+    //testEncodeAndDecode();
+    //testGetCountRedOverValue(250);
+    //testSetRedToHalfValueInTopHalf();
+    //testClearBlueOverValue(200);
+    //testGetAverageForColumn(0);
+  }
+}
